@@ -1,0 +1,14 @@
+#include "./amber_na.ff/forcefield.itp"
+#include "./nschwierz.ff/ff_ions.itp"
+#include "./silica.itp"
+#include "./amber_na.ff/tip3p.itp"
+#include "./nschwierz.ff/ions.itp"
+
+
+[ system ]
+; name
+Silica in water
+
+[ molecules ]
+; Compound        #mols
+silica                1

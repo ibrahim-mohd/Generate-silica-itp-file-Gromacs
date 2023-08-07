@@ -1,0 +1,566 @@
+                       :-) GROMACS - gmx mdrun, 2020 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020
+Executable:   /Modules/Data/gromacs/install/2020.0_HP/bin/gmx_mpi
+Data prefix:  /Modules/Data/gromacs/install/2020.0_HP
+Working dir:  /STORAGE/ibmohd/DATA/Silica-water-setup
+Process ID:   3453
+Command line:
+  gmx mdrun -deffnm npt/npt -v
+
+GROMACS version:    2020
+Verified release checksum is c8f31ed8bc66001c3c8d6e5ddb61aab8bb1d400b5f5dba93c53473fa79c1a50a
+Precision:          single
+Memory model:       64 bit
+MPI library:        MPI
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
+GPU support:        CUDA
+SIMD instructions:  AVX2_256
+FFT library:        fftw-3.3.8-sse2-avx-avx2-avx2_128
+RDTSCP usage:       enabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+C compiler:         /Modules/Data/openmpi/install/4.0.2/bin/mpicc GNU 7.5.0
+C compiler flags:   -mavx2 -mfma -fexcess-precision=fast -funroll-all-loops
+C++ compiler:       /Modules/Data/openmpi/install/4.0.2/bin/mpicxx GNU 7.5.0
+C++ compiler flags: -mavx2 -mfma -fexcess-precision=fast -funroll-all-loops -fopenmp
+CUDA compiler:      /Modules/Data/cuda/install/9.2/bin/nvcc nvcc: NVIDIA (R) Cuda compiler driver;Copyright (c) 2005-2018 NVIDIA Corporation;Built on Tue_Jun_12_23:07:04_CDT_2018;Cuda compilation tools, release 9.2, V9.2.148
+CUDA compiler flags:-std=c++14;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_35,code=compute_35;-gencode;arch=compute_50,code=compute_50;-gencode;arch=compute_52,code=compute_52;-gencode;arch=compute_60,code=compute_60;-gencode;arch=compute_61,code=compute_61;-gencode;arch=compute_70,code=compute_70;-use_fast_math;-D_FORCE_INLINES;-mavx2 -mfma -fexcess-precision=fast -funroll-all-loops -fopenmp
+CUDA driver:        11.40
+CUDA runtime:       9.20
+
+
+Running on 1 node with total 8 cores, 16 logical cores, 1 compatible GPU
+Hardware detected on host tbsl102 (the node of MPI rank 0):
+  CPU info:
+    Vendor: Intel
+    Brand:  Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz
+    Family: 6   Model: 63   Stepping: 2
+    Features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma htt intel lahf mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+  Hardware topology: Basic
+    Sockets, cores, and logical processors:
+      Socket  0: [   0   8] [   1   9] [   2  10] [   3  11] [   4  12] [   5  13] [   6  14] [   7  15]
+  GPU info:
+    Number of GPUs detected: 1
+    #0: NVIDIA NVIDIA GeForce GTX 960, compute cap.: 5.2, ECC:  no, stat: compatible
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE CITE THE DOI FOR THIS VERSION OF GROMACS ++++
+https://doi.org/10.5281/zenodo.3562495
+-------- -------- --- Thank You --- -------- --------
+
+Input Parameters:
+   integrator                     = md
+   tinit                          = 0
+   dt                             = 0.002
+   nsteps                         = 50000
+   init-step                      = 0
+   simulation-part                = 1
+   comm-mode                      = Linear
+   nstcomm                        = 100000
+   bd-fric                        = 0
+   ld-seed                        = 260868813
+   emtol                          = 10
+   emstep                         = 0.01
+   niter                          = 20
+   fcstep                         = 0
+   nstcgsteep                     = 1000
+   nbfgscorr                      = 10
+   rtpi                           = 0.05
+   nstxout                        = 0
+   nstvout                        = 0
+   nstfout                        = 0
+   nstlog                         = 10000
+   nstcalcenergy                  = 100000
+   nstenergy                      = 1000000
+   nstxout-compressed             = 5000
+   compressed-x-precision         = 1000
+   cutoff-scheme                  = Verlet
+   nstlist                        = 20
+   pbc                            = xyz
+   periodic-molecules             = true
+   verlet-buffer-tolerance        = 0.005
+   rlist                          = 1.21
+   coulombtype                    = PME
+   coulomb-modifier               = Potential-shift
+   rcoulomb-switch                = 0
+   rcoulomb                       = 1.2
+   epsilon-r                      = 1
+   epsilon-rf                     = inf
+   vdw-type                       = Cut-off
+   vdw-modifier                   = Potential-shift
+   rvdw-switch                    = 0
+   rvdw                           = 1.2
+   DispCorr                       = EnerPres
+   table-extension                = 1
+   fourierspacing                 = 0.12
+   fourier-nx                     = 48
+   fourier-ny                     = 48
+   fourier-nz                     = 60
+   pme-order                      = 4
+   ewald-rtol                     = 1e-05
+   ewald-rtol-lj                  = 0.001
+   lj-pme-comb-rule               = Geometric
+   ewald-geometry                 = 0
+   epsilon-surface                = 0
+   tcoupl                         = V-rescale
+   nsttcouple                     = 20
+   nh-chain-length                = 0
+   print-nose-hoover-chain-variables = false
+   pcoupl                         = Parrinello-Rahman
+   pcoupltype                     = Semiisotropic
+   nstpcouple                     = 20
+   tau-p                          = 5
+   compressibility (3x3):
+      compressibility[    0]={ 4.50000e-05,  0.00000e+00,  0.00000e+00}
+      compressibility[    1]={ 0.00000e+00,  4.50000e-05,  0.00000e+00}
+      compressibility[    2]={ 0.00000e+00,  0.00000e+00,  4.50000e-05}
+   ref-p (3x3):
+      ref-p[    0]={ 1.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    1]={ 0.00000e+00,  1.00000e+00,  0.00000e+00}
+      ref-p[    2]={ 0.00000e+00,  0.00000e+00,  1.00000e+00}
+   refcoord-scaling               = No
+   posres-com (3):
+      posres-com[0]= 0.00000e+00
+      posres-com[1]= 0.00000e+00
+      posres-com[2]= 0.00000e+00
+   posres-comB (3):
+      posres-comB[0]= 0.00000e+00
+      posres-comB[1]= 0.00000e+00
+      posres-comB[2]= 0.00000e+00
+   QMMM                           = false
+   QMconstraints                  = 0
+   QMMMscheme                     = 0
+   MMChargeScaleFactor            = 1
+qm-opts:
+   ngQM                           = 0
+   constraint-algorithm           = Lincs
+   continuation                   = true
+   Shake-SOR                      = false
+   shake-tol                      = 0.0001
+   lincs-order                    = 4
+   lincs-iter                     = 1
+   lincs-warnangle                = 30
+   nwall                          = 0
+   wall-type                      = 9-3
+   wall-r-linpot                  = -1
+   wall-atomtype[0]               = -1
+   wall-atomtype[1]               = -1
+   wall-density[0]                = 0
+   wall-density[1]                = 0
+   wall-ewald-zfac                = 3
+   pull                           = false
+   awh                            = false
+   rotation                       = false
+   interactiveMD                  = false
+   disre                          = No
+   disre-weighting                = Conservative
+   disre-mixed                    = false
+   dr-fc                          = 1000
+   dr-tau                         = 0
+   nstdisreout                    = 100
+   orire-fc                       = 0
+   orire-tau                      = 0
+   nstorireout                    = 100
+   free-energy                    = no
+   cos-acceleration               = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   simulated-tempering            = false
+   swapcoords                     = no
+   userint1                       = 0
+   userint2                       = 0
+   userint3                       = 0
+   userint4                       = 0
+   userreal1                      = 0
+   userreal2                      = 0
+   userreal3                      = 0
+   userreal4                      = 0
+   applied-forces:
+     electric-field:
+       x:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       y:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       z:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+     density-guided-simulation:
+       active                     = false
+       group                      = protein
+       similarity-measure         = inner-product
+       atom-spreading-weight      = unity
+       force-constant             = 1e+09
+       gaussian-transform-spreading-width = 0.2
+       gaussian-transform-spreading-range-in-multiples-of-width = 4
+       reference-density-filename = reference.mrc
+       nst                        = 1
+       normalize-densities        = true
+       adaptive-force-scaling     = false
+       adaptive-force-scaling-time-constant = 4
+grpopts:
+   nrdf:     17006.7     23224.3
+   ref-t:         300         300
+   tau-t:           1           1
+annealing:          No          No
+annealing-npoints:           0           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp-flags[  0]: 0
+
+Changing nstlist from 20 to 100, rlist from 1.21 to 1.319
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI process
+Using 8 OpenMP threads 
+
+Pinning threads with an auto-selected logical core stride of 2
+System total charge: 0.000
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using a Gaussian width (1/beta) of 0.384195 nm for Ewald
+Potential shift: LJ r^-12: -1.122e-01 r^-6: -3.349e-01, Ewald -8.333e-06
+Initialized non-bonded Coulomb Ewald tables, spacing: 1.02e-03 size: 1176
+
+
+Using GPU 8x8 nonbonded short-range kernels
+
+Using a dual 8x8 pair-list setup updated with dynamic, rolling pruning:
+  outer list: updated every 100 steps, buffer 0.119 nm, rlist 1.319 nm
+  inner list: updated every  16 steps, buffer 0.005 nm, rlist 1.205 nm
+At tolerance 0.005 kJ/mol/ps per atom, equivalent classical 1x1 list would be:
+  outer list: updated every 100 steps, buffer 0.264 nm, rlist 1.464 nm
+  inner list: updated every  16 steps, buffer 0.065 nm, rlist 1.265 nm
+
+Using Lorentz-Berthelot Lennard-Jones combination rule
+
+Long Range LJ corr.: <C6> 8.6173e-04
+
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 320
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+G. Bussi, D. Donadio and M. Parrinello
+Canonical sampling through velocity rescaling
+J. Chem. Phys. 126 (2007) pp. 014101
+-------- -------- --- Thank You --- -------- --------
+
+There are: 17361 Atoms
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  System
+
+Started mdrun on rank 0 Sun Apr  2 01:34:38 2023
+
+           Step           Time
+              0        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle        LJ (SR)  Disper. corr.   Coulomb (SR)
+    1.71178e+04    2.64033e+04    1.04192e+04   -2.96726e+03    2.16315e+06
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.51754e+03    2.21564e+06    1.64639e+02    2.21580e+06    2.21582e+06
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    9.84393e-01   -2.32610e+02    3.56592e+04    9.17928e-07
+
+
+Step 101  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 121  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 141  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 161  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 181  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 201  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 221  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 241  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 261  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 281  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 561  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 581  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 601  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 621  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 641  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 661  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 1001  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+
+Step 1021  Warning: Pressure scaling more than 1%. This may mean your system
+ is not yet equilibrated. Use of Parrinello-Rahman pressure coupling during
+equilibration can lead to simulation instability, and is discouraged.
+step 4600: timed with pme grid 48 48 60, coulomb cutoff 1.200: 248.3 M-cycles
+step 4800: timed with pme grid 44 44 56, coulomb cutoff 1.259: 281.9 M-cycles
+step 5000: timed with pme grid 44 48 56, coulomb cutoff 1.250: 282.4 M-cycles
+step 5200: timed with pme grid 48 48 60, coulomb cutoff 1.200: 253.8 M-cycles
+              optimal pme grid 48 48 60, coulomb cutoff 1.200
+
+
+Received the INT signal, stopping within 100 steps
+
+           Step           Time
+           9000       18.00000
+
+Writing checkpoint, step 9000 at Sun Apr  2 01:34:49 2023
+
+
+   Energies (kJ/mol)
+           Bond          Angle        LJ (SR)  Disper. corr.   Coulomb (SR)
+    6.14189e+04    2.79656e+04    5.63131e+03   -2.49657e+03    2.10195e+06
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.24428e+03    2.19571e+06    5.04620e+04    2.24617e+06    2.29584e+06
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    3.01717e+02   -1.64719e+02   -2.66942e+03    1.41055e-06
+
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+	Statistics over 9001 steps using 1 frames
+
+   Energies (kJ/mol)
+           Bond          Angle        LJ (SR)  Disper. corr.   Coulomb (SR)
+    1.71178e+04    2.64033e+04    1.04192e+04   -2.96726e+03    2.16315e+06
+   Coul. recip.      Potential    Kinetic En.   Total Energy  Conserved En.
+    1.51754e+03    2.21564e+06    1.64639e+02    2.21580e+06    2.21582e+06
+    Temperature Pres. DC (bar) Pressure (bar)   Constr. rmsd
+    9.84393e-01   -2.32610e+02    3.56592e+04    0.00000e+00
+
+          Box-X          Box-Y          Box-Z
+    5.46920e+00    5.53760e+00    7.00000e+00
+
+   Total Virial (kJ/mol)
+   -4.39387e+05    4.25271e+02   -1.97927e+03
+    4.27655e+02   -2.65804e+05   -1.20969e+03
+   -1.97094e+03   -1.20329e+03    2.24545e+04
+
+   Pressure (bar)
+    6.88401e+04   -6.66492e+01    3.09882e+02
+   -6.70227e+01    4.16470e+04    1.89399e+02
+    3.08577e+02    1.88398e+02   -3.50945e+03
+
+       T-Silica     T-Sol_ions
+    6.81409e-01    1.20626e+00
+
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ Pair Search distance check             165.448576        1489.037     0.0
+ NxN Ewald Elec. + LJ [F]            166747.352384    11005325.257    99.6
+ NxN Ewald Elec. + LJ [V&F]              37.034240        3962.664     0.0
+ Shift-X                                  1.579851           9.479     0.0
+ Bonds                                   63.367040        3738.655     0.0
+ Angles                                 128.030224       21509.078     0.2
+ Virial                                   7.850106         141.302     0.0
+ Stop-CM                                  0.017361           0.174     0.0
+ Calc-Ekin                               15.659622         422.810     0.0
+ Lincs                                    2.880320         172.819     0.0
+ Constraint-V                           109.533169         876.265     0.0
+ Constraint-Vir                           5.343899         128.254     0.0
+ Settle                                  34.590843       11172.842     0.1
+-----------------------------------------------------------------------------
+ Total                                                11048948.636   100.0
+-----------------------------------------------------------------------------
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 1 MPI rank, each using 8 OpenMP threads
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Neighbor search        1    8         91       0.192          3.674   1.7
+ Launch GPU ops.        1    8       9001       0.746         14.297   6.7
+ Force                  1    8       9001       0.998         19.110   8.9
+ Wait PME GPU gather    1    8       9001       2.141         41.014  19.2
+ Reduce GPU PME F       1    8       9001       0.066          1.263   0.6
+ Wait GPU NB local                              2.181         41.779  19.5
+ NB X/F buffer ops.     1    8      17911       0.196          3.745   1.7
+ Write traj.            1    8          3       0.022          0.428   0.2
+ Update                 1    8       9001       0.133          2.548   1.2
+ Constraints            1    8       9001       0.253          4.839   2.3
+ Rest                                           4.251         81.438  38.0
+-----------------------------------------------------------------------------
+ Total                                         11.179        214.135 100.0
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:       89.391       11.179      799.7
+                 (ns/day)    (hour/ns)
+Performance:      139.138        0.172
+Finished mdrun on rank 0 Sun Apr  2 01:34:50 2023
+
