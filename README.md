@@ -1,6 +1,6 @@
 # Silica Model
 ## Description
-Here we provide python scripts that creates Gromacs `itp` files for simulatig  &alpha;-cristobalite silica surface. The forcefield parameters assigned based on [ this paper ](https://pubs.acs.org/doi/10.1021/cm500365c). This repository contains following files:
+Here I provide python scripts that creates Gromacs `itp` files for simulatig  &alpha;-cristobalite silica surface. The forcefield parameters assigned based on [ this paper ](https://pubs.acs.org/doi/10.1021/cm500365c). This repository contains following files:
 1. `unitcell.gro`: Unitcell of &alpha;-cristobalite
 
 2. `modify_silica_gro.py`: A python script that takes a `.gro` file of an &alpha;-cristobalite as input and modifies atom names, adds missing surface oxygens and protonates the surface based on an input protonation fraction.  
