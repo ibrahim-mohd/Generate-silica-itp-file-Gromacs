@@ -164,7 +164,7 @@ for atom_name in list (lj_params.keys ()):
 
     
 #################Molecualr type
-itp_file.write ("\n[ moleculetype ] \n; name \t rexcl \n silica \t 3\n")
+itp_file.write ("\n[ moleculetype ] \n; name \t rexcl \n silica \t 2\n")
 itp_file.write ("\n[ atoms ]\n;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   ;bond_type\n")
 
 
