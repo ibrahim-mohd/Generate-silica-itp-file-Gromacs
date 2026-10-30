@@ -23,7 +23,7 @@ The following commands assume that you have the first three files mentioned in t
 
 Figure 1: <em>&alpha;-cristobalite Unitcell </em>
 
-3. Rotate the above crystal to expose the **100** plane normal to the z-direction. To do so, note the box dimensions from the above output file `lattice.gro`. Lets say the dimensions are ` bx`, `by` and `bz`,
+3. Rotate the above crystal to expose the **100 or 010** plane normal to the z-direction. To do so, note the box dimensions from the above output file `lattice.gro`. Lets say the dimensions are ` bx`, `by` and `bz`,
 
          gmx editconf -f lattice.gro -rotate 90 0 0 -c -box bx bz 7 -o box.gro
 
