@@ -56,6 +56,6 @@ I have defined the following atom names and atoms types
 | sis | sis | Surface silicon with one silanol group (Si-OH), bonded to 1 ohs + 3 osib |
 | sio | sio | Surface silicon with one deprotonated siloxide group (Si-O-), bonded to 1 osi + 3 osib |
 | osib | osib | Bridging (siloxane) oxygen linking two silicons, Si-O-Si |
-| osi | osi | Deprotonated siloxide oxygen (Si-O-), charge balanced by Na+ counter-ions |
+| osi | osi | Deprotonated siloxide oxygen (Si-O-) |
 | ohs | ohs | Silanol oxygen (Si-O-H) |
 | hso | hso | Silanol hydrogen (Si-O-H) |
