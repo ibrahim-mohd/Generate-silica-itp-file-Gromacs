@@ -50,8 +50,8 @@ Where, `-hf` flag protonates certian percentage of surface oxygen. Here, 91 % of
 ## Silica atom names and atom types
 I have defined the following atom names and atoms types 
 
-| Atom type | Atom name | Description |
-|-----------|-----------|-------------|
+| Atom type | Atom name | Description       |
+|-----------|-----------|-------------------|
 | si | si | Bulk silicon bonded to four bridging oxygens, Si(O-Si)4 |
 | sis | sis | Surface silicon with one silanol group (Si-OH), bonded to 1 ohs + 3 osib |
 | sio | sio | Surface silicon with one deprotonated siloxide group (Si-O-), bonded to 1 osi + 3 osib |
